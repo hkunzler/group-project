@@ -1,6 +1,6 @@
 const express = require('express')
 const estoreRouter = express.Router()
-const Products = require('../models/products.js')
+const Products = require('../models/product.js')
 
 estoreRouter.get("/" , (req, res) => {
     Products.find((err, products) => {
@@ -22,3 +22,5 @@ estoreRouter.get("/:_id" , (req, res) =>{
         return res.status(200).send(foundProduct)
     })
 })
+
+module.exports = estoreRouter

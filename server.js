@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 
-app.use("/" , require ('/routes/estoreRoutes.js'))
+app.use("/" , require ('./routes/estoreRoutes.js'))
 
 mongoose.connect("mongodb://localhost:27017/products-db", {useNewUrlParser: true}, () => {
     console.log('[XD] connected to DB')
