@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withProduct } from '../context/ProductProvider'
 import SearchForm from './SearchForm'
+
+
 class Home extends Component {
     componentDidMount = () => {
         this.props.getProduct()
