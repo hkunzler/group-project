@@ -26,14 +26,13 @@ class ProductProvider extends Component {
             })
         }).catch(error => console.log(error))
     }
-
-    handleDelete = (_id) => {
-        axios.delete(`../../product/${_id}`).then(response => {
-            this.setState(prevState => ({
-                product: prevState.product.filter( product => product._id !== _id)
-            }))
-        })
-    }
+    // handleDelete = (_id) => {
+    //     axios.delete(`../../product/${_id}`).then(response => {
+    //         this.setState(prevState => ({
+    //             product: prevState.product.filter( product => product._id !== _id)
+    //         }))
+    //     })
+    // }
     render() {
         return (
             <div>
