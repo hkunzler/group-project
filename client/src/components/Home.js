@@ -15,7 +15,7 @@ class Home extends Component {
             </div>
         ))
         return (
-            <div>
+            <div className="home-container">
                 <h1>This is the Home Page.</h1>
                 <SearchForm />
                 {mappedProduct}
