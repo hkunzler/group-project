@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom'
-import Nav from './components/Nav';
+import NavBar from './components/NavBar';
 import Home from './components/Home'
 import Contact from './components/Contact';
 import About from './components/About';
@@ -9,7 +9,7 @@ import Cart from './components/Cart'
 const App = () => {
     return (
         <div>
-            <Nav />
+            <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/contact' component={Contact} />
