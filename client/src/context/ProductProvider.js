@@ -20,19 +20,13 @@ class ProductProvider extends Component {
         this.getProduct()
     }
     getProduct = () => {
-        axios.get("../../product").then(response => {
+        axios.get("/products").then(response => {
+            console.log(response.data)
             this.setState({
                 product: response.data
             })
         }).catch(error => console.log(error))
     }
-    // handleDelete = (_id) => {
-    //     axios.delete(`../../product/${_id}`).then(response => {
-    //         this.setState(prevState => ({
-    //             product: prevState.product.filter( product => product._id !== _id)
-    //         }))
-    //     })
-    // }
     render() {
         return (
             <div>
@@ -55,7 +49,7 @@ class ProductProvider extends Component {
 export default ProductProvider;
 
 export const withProduct = C => props => (
-    <ProductContext>
+    <ProductContext.Consumer>
         {value => <C {...props}{...value}/>}
-    </ProductContext>
+    </ProductContext.Consumer>
 )

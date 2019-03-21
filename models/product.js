@@ -8,7 +8,8 @@ const productSchema = new Schema({
     },
     itemType: {
         type: String,
-        enum: ["hat", "shirt", "pants"]
+        enum: ["hat", "shirt", "pants"],
+        required: true
     },
     subType: {
         type: String,
@@ -21,7 +22,7 @@ const productSchema = new Schema({
     },
     gender: {
         type: String,
-        enum: ["male", "female"]
+        enum: ["Male", "female"]
     },
     price: {
         type: Number,
