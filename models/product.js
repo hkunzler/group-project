@@ -6,12 +6,28 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    itemType: {
         type: String,
+        enum: ["hat", "shirt", "pants"]
+    },
+    subType: {
+        type: String,
+        enum: ["shorts", "formal", "jeans", "button-up", "long-sleeve", "tee", "cap", "beanie"]
+    },
+    description: String,
+    age: {
+        type: String,
+        enum: ["adult", "kid"]
+    },
+    gender: {
+        type: String,
+        enum: ["male", "female"]
+    },
+    price: {
+        type: Number,
         required: true
     },
-    imgURL: String,
-    price: {
+    imgURL: {
         type: String,
         required: true
     }
