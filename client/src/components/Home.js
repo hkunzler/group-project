@@ -11,8 +11,6 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
-                <h1>This is the Home Page.</h1>
-                <SearchForm />
                 <Cards/>
             </div>
         );
