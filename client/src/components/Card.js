@@ -12,6 +12,7 @@ class Cards extends Component {
         this.props.getProduct()
     }
     render() {
+        console.log(this.props)
         const mappedProduct = this.props.product.map(product => (
             < div  >
                 < div style={{margin: '10px 15px'}}>
@@ -21,7 +22,7 @@ class Cards extends Component {
                     <CardSubtitle>{product.description}</CardSubtitle>
                     <CardText>${product.price}</CardText>
 
-                    <Button> Add to cart </Button>
+                    <Button onClick={() => this.props.addToCart(product._id)}> Add to cart </Button>
                 </CardBody>
                 </div>
                 </div>
