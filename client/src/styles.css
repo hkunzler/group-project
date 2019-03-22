@@ -55,7 +55,6 @@ font-size: 20px;
     opacity: 0;
     transition: opacity 600ms linear;
   }
-
 .cards{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -71,4 +70,3 @@ font-size: 20px;
     background: none;
     border: none;
 }
-
