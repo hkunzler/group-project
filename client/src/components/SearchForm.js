@@ -11,7 +11,6 @@ class SearchForm extends Component {
     render() {
         return (
             <div>
-                <h2>Search</h2>
                 <form
                     onSubmit={this.props.handleSubmit}
                 >
@@ -22,15 +21,8 @@ class SearchForm extends Component {
                         value={this.props.productSearch}
                         onChange={this.props.handleChange}
                     />
-                    <button>Search</button>
+                    <button className='search-button'><i class="fa fa-search"></i></button>
                 </form>  
-                <div>
-                    {this.props.product.map(product => (
-                        <div>
-                            <h1>{product.itemName}</h1>
-                        </div>
-                    ))}
-                </div>
             </div>
         );
     }

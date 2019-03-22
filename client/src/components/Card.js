@@ -1,25 +1,39 @@
-import React from 'react'
+import React, { Component } from 'react';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
+import { withProduct } from '../context/ProductProvider'
 
 
-const Card = () => {
-    return (
-        <div>
-            <Card>
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle>Product name</CardTitle>
-                    <CardSubtitle> general description </CardSubtitle>
-                    <CardText> Some quick example text to build on the card title and make up the bulk of the card's content. </CardText>
-                    <CardText> price goes here</CardText>
+
+class Cards extends Component {
+    componentDidMount = () => {
+        this.props.getProduct()
+    }
+    render() {
+        const mappedProduct = this.props.product.map(product => (
+            < div  >
+                < div style={{margin: '10px 15px'}}>
+                    <CardImg style={{ width: '100%', height: '500px'}} src={product.imgURL} alt={product.itemName} />
+                <CardBody >
+                    <CardTitle>{product.itemName}</CardTitle>
+                    <CardSubtitle>{product.description}</CardSubtitle>
+                    <CardText>${product.price}</CardText>
+
                     <Button> Add to cart </Button>
                 </CardBody>
-            </Card>
-        </div>
-    )
+                </div>
+                </div>
+                   )
+                    )
+
+        return (
+                <div className = 'cards'>
+                    {mappedProduct}
+                </div>
+        )
+    }
 }
 
-export default Card
+export default withProduct(Cards)
