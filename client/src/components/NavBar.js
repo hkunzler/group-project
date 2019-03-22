@@ -1,5 +1,7 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import SearchForm from './SearchForm'
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -16,13 +18,16 @@ class NavBar extends React.Component {
       collapsed: !this.state.collapsed
     });
   }
+
   render() {
     return (
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">Chaos Apparel</NavbarBrand>
+          <NavbarBrand href="/" className="mr-auto">Chaos Apparel </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          
           <Collapse isOpen={!this.state.collapsed} navbar>
+          <SearchForm />           
             <Nav navbar>
               <NavItem>
                 <NavLink href="/">Home</NavLink>

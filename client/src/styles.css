@@ -2,9 +2,15 @@
     margin: 0;
 }
 
+body {
+  /* background-color: aliceblue !important; */
+
+}
+
 .app-container{
     height: 100vh;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+
 }
 
 .navbar{
@@ -49,3 +55,20 @@ font-size: 20px;
     opacity: 0;
     transition: opacity 600ms linear;
   }
+
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* margin: 10px 15px; */
+}
+
+.card-body{
+        background-color: lightgrey !important;
+        /* margin: 0 5px !important; */
+}
+
+.search-button{
+    background: none;
+    border: none;
+}
+
