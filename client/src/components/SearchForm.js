@@ -25,11 +25,11 @@ class SearchForm extends Component {
                     <button>Search</button>
                 </form>  
                 <div>
-                    {this.props.product.map(product => (
+                    {/* {this.props.product.map(product => (
                         <div>
                             <h1>{product.itemName}</h1>
                         </div>
-                    ))}
+                    ))} */}
                 </div>
             </div>
         );
