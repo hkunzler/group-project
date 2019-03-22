@@ -16,6 +16,7 @@ class NavBar extends React.Component {
       collapsed: !this.state.collapsed
     });
   }
+
   render() {
     return (
       <div>

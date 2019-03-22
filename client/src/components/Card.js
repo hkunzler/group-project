@@ -20,6 +20,7 @@ class Cards extends Component {
                     <CardTitle>{product.itemName}</CardTitle>
                     <CardSubtitle>{product.description}</CardSubtitle>
                     <CardText>${product.price}</CardText>
+
                     <Button> Add to cart </Button>
                 </CardBody>
                 </div>
