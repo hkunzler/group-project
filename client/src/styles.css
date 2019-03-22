@@ -35,3 +35,8 @@ font-size: 20px;
         background-color: lightgrey !important;
         /* margin: 0 5px !important; */
 }
+
+.search-button{
+    background: none;
+    border: none;
+}
