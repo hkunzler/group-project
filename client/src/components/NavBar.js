@@ -27,8 +27,8 @@ class NavBar extends React.Component {
       <div>
         <Navbar color="faded" light >
           <NavbarBrand href="/" className="mr-auto" className='logo'></NavbarBrand>
-          <NavLink to="/cart" className="fa-stack fa-2x" data-count={totalItems}>
-            <i className="fa fa-shopping-cart fa-stack-2x shopping-cart"></i>
+          <NavLink to="/cart" className="fa-stack fa-2x shopping-cart" data-count={totalItems}>
+            <i className="fa fa-shopping-cart fa-stack-2x"></i>
           </NavLink>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
