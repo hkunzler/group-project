@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withProduct } from '../context/ProductProvider'
-import SearchForm from './SearchForm'
 import Cards from './Card'
+import ProductCarousel from './ProductCarousel'
 
 
 class Home extends Component {
@@ -11,7 +11,8 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
-                <Cards/>
+                <ProductCarousel/>
+                <Cards />
             </div>
         );
     }
