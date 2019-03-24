@@ -18,8 +18,7 @@ const Cart = props => {
         }}
           ></div>
           <h4>{item.itemName}</h4>
-          <h3>{item.price}</h3>
-          {/* {total += item.price} */}
+          <h3>${item.price}</h3>
     </div>
   ));
     return (
