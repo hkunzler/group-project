@@ -28,6 +28,14 @@ class ProductProvider extends Component {
             })
         }).catch(error => console.log(error))
     }
+    getAdultMale = () => {
+        axios.get("/products?gender=Male&age=adult").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
     addToCart = (_id) => {
         console.log(_id)
         axios.get(`/products/${_id}`).then(response => {
@@ -48,7 +56,8 @@ class ProductProvider extends Component {
                         getProduct: this.getProduct,
                         handleDelete: this.handleDelete,
                         handleChange: this.handleChange,
-                        handleSubmit: this.handleSubmit
+                        handleSubmit: this.handleSubmit,
+                        getAdultMale: this.getAdultMale
                     }}
                 >
                     {this.props.children}
