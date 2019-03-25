@@ -49,6 +49,11 @@ font-size: 20px;
     grid-template-columns: auto auto auto;
     /* margin: 10px 15px; */
 }
+.individual-card {
+  display: flex;
+  justify-content: space-around;
+  
+}
 
 .card-body{
         background-color: lightgrey !important;

@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import {
-    Card, CardImg, CardText, CardBody,
+    CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import { withProduct } from '../context/ProductProvider'
-import { Carousel } from 'react-responsive-carousel';
-
+import { Link } from "react-router-dom";
 
 
 class KidHats extends Component {
     componentDidMount = () => {
-        // this.props.getProduct()
         this.props.getKidHats()
 
     }
@@ -18,19 +16,19 @@ class KidHats extends Component {
         const mappedProduct = this.props.product.map(product => (
             < div  >
                 < div style={{margin: '10px 15px'}}>
+                <Link to={product._id}>
                     <CardImg style={{ width: '100%', height: '500px'}} src={product.imgURL} alt={product.itemName} />
-                <CardBody >
-                    <CardTitle>{product.itemName}</CardTitle>
-                    <CardSubtitle>{product.description}</CardSubtitle>
-                    <CardText>${product.price}</CardText>
-
-                    <Button onClick={() => this.props.addToCart(product._id)}> Add to cart </Button>
-                </CardBody>
-                </div>
+                    </Link>
+                    <CardBody >
+                        <CardTitle>{product.itemName}</CardTitle>
+                        <CardSubtitle>{product.description}</CardSubtitle>
+                        <CardText>${product.price}</CardText>
+                        <Button onClick={() => this.props.addToCart(product._id)}> Add to cart </Button>
+                    </CardBody>
+                    </div>
                 </div>
                    )
                     )
-
         return (
             <div>
                 <div className = 'cards'>

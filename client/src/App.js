@@ -16,6 +16,7 @@ import KidHats from './components/KidHats'
 import KidPants from './components/KidPants'
 import KidShirt from './components/KidShirt'
 import { PageFade } from './transitions/index.js'
+import IndividualItem from './components/IndividualItem'
 import './styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -48,7 +49,8 @@ class App extends Component {
                     <Route path='/womenpants' component={WomenPants} />
                     <Route path='/kidshats' component={KidHats}/>
                     <Route path='/kidsshirts' component={KidShirt}/>
-                    <Route path='/kidspants' component={KidPants}/>
+                    <Route path='/kidspants' component={KidPants} />
+                    <Route path='/:_id' component={IndividualItem}/>
                 </Switch>
             </PageFade>
         </div>
