@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "title": "Men",
+            "items": [
+                {
+                    "title": "Hats"
+                },
+                {
+                    "title": "Shirts"
+                },
+                {
+                    "title": "Pants"
+                }
+            ]
+        },
+        {
+            "title": "Women",
+            "items": [
+                {
+                    "title": "Hats"
+                },
+                {
+                    "title": "Shirts"
+                },
+                {
+                    "title": "Pants"
+                }
+            ]
+        },
+        {
+            "title": "Kids",
+            "items": [
+                {
+                    "title": "Hats"
+                },
+                {
+                    "title": "Shirts"
+                },
+                {
+                    "title": "Pants"
+                }
+            ]
+        }
+    ]
+}

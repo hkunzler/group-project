@@ -21,7 +21,7 @@ class SearchForm extends Component {
                         value={this.props.productSearch}
                         onChange={this.props.handleChange}
                     />
-                    <button className='search-button' ><i class="fa fa-search"></i></button>
+                    <button className='search-button'><i className="fa fa-search"></i></button>
                 </form>  
             </div>
         );

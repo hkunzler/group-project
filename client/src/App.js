@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Switch, Route, withRouter} from 'react-router-dom'
 import NavBar from './components/NavBar';
+import NestedNavbar from './components/NestedNavbar.js'
 import Home from './components/Home'
 import Contact from './components/Contact';
 import About from './components/About';
@@ -20,8 +21,10 @@ class App extends Component {
         const { location } = this.props
 
     return (
-        <div>
+        <div className='app'>
             <NavBar />
+            <NestedNavbar/>
+            
             <PageFade location={location}>
                 <Switch location={location}>
                     <Route exact path='/' component={Home} />
