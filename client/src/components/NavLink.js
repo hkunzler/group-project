@@ -21,7 +21,7 @@ class NavLink extends Component {
             <div className="nav-item">
                 <Link to="/" onClick={this.toggleMenu}>{this.props.title}</Link>
                 {this.state.extendedMenuToggle &&  this.props.items.map(item => {
-                    return ( <Link className="type" to="type">- {item.title}</Link>)
+                    return ( <Link className="type" to={(this.props.title+item.title).toLowerCase()}>{item.title}</Link>)
                 })}
             </div>
         )
