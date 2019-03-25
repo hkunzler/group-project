@@ -7,7 +7,7 @@ import ProductCarousel from './ProductCarousel'
 class Home extends Component {
     componentDidMount = () => {
         // this.props.getProduct()
-        this.props.getAdultMale()
+        // this.props.getAdultMaleHats()
     }
     render() {
         return (

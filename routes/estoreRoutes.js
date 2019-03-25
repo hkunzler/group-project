@@ -14,15 +14,87 @@ estoreRouter.post('/', (req, res, next) => {
 
 estoreRouter.get("/" , (req, res) => {
     // res.send(req.query.gender)
-    const {gender, age} = req.query
+    const {gender, age, type} = req.query
     // res.send(gender
-    if(gender === 'Male' && age==="adult"){
-        Products.find({"gender" : "Male", "age" : "adult"}, function (err, product){
+    if(gender === 'Male' && age==="adult" && type === "hat"){
+        Products.find({"gender" : "Male", "age" : "adult", "type":"hat"}, function (err, product){
             if (err) return res.send(err)
             return res.status(200).send(product)
         })
     
-    }else{
+    } else if (gender === 'Male' && age === "adult" && type === "shirt") {
+        Products.find({
+            "gender": "Male",
+            "age": "adult",
+            "type": "shirt"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    } else if (gender === 'male' && age === "adult" && type === "pants") {
+        Products.find({
+            "gender": "male",
+            "age": "adult",
+            "type": "pants"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    } else if (gender === 'female' && age === "adult" && type === "hat") {
+        Products.find({
+            "gender": "female",
+            "age": "adult",
+            "type": "hat"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+
+    } else if (gender === 'female' && age === "adult" && type === "shirt") {
+        Products.find({
+            "gender": "female",
+            "age": "adult",
+            "type": "shirt"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    } else if (gender === 'female' && age === "adult" && type === "pants") {
+        Products.find({
+            "gender": "female",
+            "age": "adult",
+            "type": "pants"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    } else if (age === "kid" && type === "hat") {
+        Products.find({
+            "age": "kid",
+            "type": "hat"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+
+    } else if (age === "kid" && type === "shirt") {
+        Products.find({
+            "age": "kid",
+            "type": "shirt"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    } else if (age === "kid" && type === "pants") {
+        Products.find({
+            "age": "kid",
+            "type": "pants"
+        }, function (err, product) {
+            if (err) return res.send(err)
+            return res.status(200).send(product)
+        })
+    }
+    else {
          Products.find((err, products) => {
         if (err){
             res.status(500)
