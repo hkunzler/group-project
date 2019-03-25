@@ -4,12 +4,15 @@ import {
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import { withProduct } from '../context/ProductProvider'
+import { Carousel } from 'react-responsive-carousel';
 
 
 
 class Cards extends Component {
     componentDidMount = () => {
-        this.props.getProduct()
+        // this.props.getProduct()
+        this.props.getAdultMale()
+
     }
     render() {
         console.log(this.props)
