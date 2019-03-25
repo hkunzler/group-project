@@ -2,17 +2,6 @@
     margin: 0;
 }
 
-body {
-  /* background-color: aliceblue !important; */
-
-}
-
-.app-container{
-    height: 100vh;
-    /* background-color: antiquewhite; */
-
-}
-
 .navbar{
 text-align: center;
 display: flex;
@@ -69,4 +58,99 @@ font-size: 20px;
 .search-button{
     background: none;
     border: none;
+}
+
+/* ///////////////////////////////////// */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #D3D3D3;
+  font-family: 'Allerta Stencil',
+  sans-serif;
+
+  text-decoration: none;
+  /* text-shadow: -.5px -.5px 0 #D3D3D3, .5px -1px 0 #D3D3D3, -.5px .5px 0 #D3D3D3, .5px .5px 0 #D3D3D3; */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.sub-item {
+  padding-left: 20px;
+}
+
+.nav a {
+  margin: 5px 0;
+  font-size: 25px;
+  color: black;
+  padding: 0 10px;
+}
+
+.nav a:visited {
+  color: black
+}
+
+.nav a:active {
+  color: black;
+}
+.nav a:hover {
+  border: 1px solid white;
+  font-weight: bolder;
+}
+
+.cart-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    background: url(./media/chaosApparel.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 100px;
+    margin-left: -100px;
+}
+.shopping-cart{
+    color: #3B7CC7;
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     margin-bottom: 25px;
+     margin-right: 25px;
+}
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:0%;
+    content: attr(data-count);
+    font-size:40%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    color:#3B7CC7;
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+    background: white;
+    border-style:solid;
+}
+
+.carousel .slide {
+  background: white !important;
+}
+
+.featured{
+  font-family: 'Homenaje',
+  sans-serif;
 }

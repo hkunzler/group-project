@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { withProduct } from '../context/ProductProvider'
-import SearchForm from './SearchForm'
 import Cards from './Card'
+import ProductCarousel from './ProductCarousel'
+import ItemCarousel from './ItemCarousel'
 
 
 class Home extends Component {
-    componentDidMount = () => {
-        this.props.getProduct()
-    }
     render() {
         return (
             <div className="home-container">
-                <Cards/>
+                <ProductCarousel />
+                <ItemCarousel/>
+                {/* <Cards /> */}
             </div>
         );
     }

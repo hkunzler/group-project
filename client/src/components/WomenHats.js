@@ -8,14 +8,13 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 
-class Cards extends Component {
+class WomenHats extends Component {
     componentDidMount = () => {
         // this.props.getProduct()
-        this.props.getAdultMale()
+        this.props.getAdultFemaleHats()
 
     }
     render() {
-        console.log(this.props)
         const mappedProduct = this.props.product.map(product => (
             < div  >
                 < div style={{margin: '10px 15px'}}>
@@ -33,11 +32,13 @@ class Cards extends Component {
                     )
 
         return (
+            <div>
                 <div className = 'cards'>
                     {mappedProduct}
+                </div>
                 </div>
         )
     }
 }
 
-export default withProduct(Cards)
+export default withProduct(WomenHats)
