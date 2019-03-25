@@ -66,17 +66,20 @@ font-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #3B7CC7;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-shadow: -.5px -.5px 0 #D3D3D3, .5px -1px 0 #D3D3D3, -.5px .5px 0 #D3D3D3, .5px .5px 0 #D3D3D3;
-}
+  background-color: #D3D3D3;
+  font-family: 'Allerta Stencil',
+  sans-serif;
 
+  text-decoration: none;
+  /* text-shadow: -.5px -.5px 0 #D3D3D3, .5px -1px 0 #D3D3D3, -.5px .5px 0 #D3D3D3, .5px .5px 0 #D3D3D3; */
+}
 
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .sub-item {
   padding-left: 20px;
@@ -86,6 +89,7 @@ font-size: 20px;
   margin: 5px 0;
   font-size: 25px;
   color: black;
+  padding: 0 10px;
 }
 
 .nav a:visited {
@@ -94,6 +98,10 @@ font-size: 20px;
 
 .nav a:active {
   color: black;
+}
+.nav a:hover {
+  border: 1px solid white;
+  font-weight: bolder;
 }
 
 .cart-flex{
@@ -136,4 +144,13 @@ font-size: 20px;
     font-weight:bold;
     background: white;
     border-style:solid;
+}
+
+.carousel .slide {
+  background: white !important;
+}
+
+.featured{
+  font-family: 'Homenaje',
+  sans-serif;
 }
