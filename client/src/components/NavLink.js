@@ -18,7 +18,7 @@ class NavLink extends Component {
 
     render(){
         return (
-            <div className="nav-item">
+            <div className="nested-nav-item">
                 <Link to="/" onClick={this.toggleMenu}>{this.props.title}</Link>
                 {this.state.extendedMenuToggle &&  this.props.items.map(item => {
                     return ( <Link className="type" to="type">- {item.title}</Link>)
