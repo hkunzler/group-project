@@ -7,6 +7,7 @@ import About from './components/About';
 import Cart from './components/Cart'
 import { PageFade } from './transitions/index.js'
 import './styles.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class App extends Component {
     constructor(){

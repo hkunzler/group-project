@@ -1,6 +1,9 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 import SearchForm from './SearchForm'
+import { withProduct } from "../context/ProductProvider";
+
 
 
 class NavBar extends React.Component {
@@ -12,7 +15,6 @@ class NavBar extends React.Component {
       collapsed: true
     };
   }
-
   toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed
@@ -20,26 +22,26 @@ class NavBar extends React.Component {
   }
 
   render() {
+    const totalItems = this.props.cart.length
     return (
       <div>
-        <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">Chaos Apparel </NavbarBrand>
+        <Navbar color="faded" light >
+          <NavbarBrand href="/" className="mr-auto" className='logo'></NavbarBrand>
+          <NavLink to="/cart" className="fa-stack fa-2x shopping-cart" data-count={totalItems}>
+            <i className="fa fa-shopping-cart fa-stack-2x"></i>
+          </NavLink>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          
           <Collapse isOpen={!this.state.collapsed} navbar>
           <SearchForm />           
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
+            <Nav onClick={this.toggleNavbar} navbar>
+              <NavItem  >
+                <NavLink exact to="/">Home</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
+              <NavItem >
+                <NavLink to="/contact">Contact</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/cart">Cart</NavLink>
+              <NavItem >
+                <NavLink to="/about">About</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -49,5 +51,5 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar
+export default withProduct(NavBar)
 

@@ -60,7 +60,6 @@ font-size: 20px;
     border: none;
 }
 
-
 /* ///////////////////////////////////// */
 
 .nav {
@@ -92,4 +91,46 @@ font-size: 20px;
 
 .nav a:active {
   color: black;
+}
+
+.cart-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    background: url(./media/chaosApparel.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 100px;
+    margin-left: -100px;
+}
+.shopping-cart{
+    color: #3B7CC7;
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     margin-bottom: 25px;
+     margin-right: 25px;
+}
+
+.fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:0%;
+    content: attr(data-count);
+    font-size:40%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    color:#3B7CC7;
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+    background: white;
+    border-style:solid;
 }
