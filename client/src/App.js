@@ -20,8 +20,9 @@ class App extends Component {
         const { location } = this.props
 
     return (
-        <div>
+        <div className='app'>
             <NavBar />
+            
             <PageFade location={location}>
                 <Switch location={location}>
                     <Route exact path='/' component={Home} />
