@@ -32,7 +32,7 @@ const IndividualItem = (props) => {
                             <CardTitle>{item.itemName}</CardTitle>
                             <CardSubtitle>{item.description}</CardSubtitle>
                             <CardText>${item.price}</CardText>
-                            <Button onClick={() => item.addToCart(item._id)}> Add to cart </Button>
+                            <Button onClick={() => props.addToCart(item._id)}> Add to cart </Button>
                         </CardBody>
                     </div>
                     </div>
