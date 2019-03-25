@@ -69,6 +69,7 @@ estoreRouter.get("/" , (req, res) => {
             return res.status(200).send(product)
         })
     } else if (age === "kid" && type === "hat") {
+        console.log(req.query);
         Products.find({
             "age": "kid",
             "type": "hat"
