@@ -28,6 +28,86 @@ class ProductProvider extends Component {
             })
         }).catch(error => console.log(error))
     }
+    getAdultMale = () => {
+        axios.get("/products?gender=Male&age=adult").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+     getAdultMaleHats = () => {
+         axios.get("/products?gender=Male&age=adult&type=hat").then(response => {
+             console.log(response.data)
+             this.setState({
+                 product: response.data
+             })
+         }).catch(error => console.log(error))
+     }
+    getAdultMaleShirt = () => {
+        axios.get("/products?gender=Male&age=adult&type=shirt").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getAdultMalePants = () => {
+        axios.get("/products?gender=male&age=adult&type=pants").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getAdultFemaleHats = () => {
+        axios.get("/products?gender=female&age=adult&type=hat").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getAdultFemaleShirt = () => {
+        axios.get("/products?gender=female&age=adult&type=shirt").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getAdultFemalePants = () => {
+        axios.get("/products?gender=female&age=adult&type=pants").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getKidHats = () => {
+        axios.get("/products?age=kid&type=hat").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getKidShirt = () => {
+        axios.get("/products?age=kid&type=shirt").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+    getKidPants = () => {
+        axios.get("/products?age=kid&type=pants").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
     addToCart = (_id) => {
         console.log(_id)
         axios.get(`/products/${_id}`).then(response => {
@@ -48,7 +128,17 @@ class ProductProvider extends Component {
                         getProduct: this.getProduct,
                         handleDelete: this.handleDelete,
                         handleChange: this.handleChange,
-                        handleSubmit: this.handleSubmit
+                        handleSubmit: this.handleSubmit,
+                        getAdultMale: this.getAdultMale,
+                        getAdultMaleHats: this.getAdultMaleHats,
+                        getAdultMaleShirt: this.getAdultMaleShirt,
+                        getAdultMalePants: this.getAdultMalePants,
+                        getAdultFemaleHats: this.getAdultFemaleHats,
+                        getAdultFemaleShirt: this.getAdultFemaleShirt,
+                        getAdultFemalePants: this.getAdultFemalePants,
+                        getKidHats: this.getKidHats,
+                        getKidShirt: this.getKidShirt,
+                        getKidPants: this.getKidPants
                     }}
                 >
                     {this.props.children}

@@ -25,7 +25,7 @@ class NavBar extends React.Component {
     const totalItems = this.props.cart.length
     return (
       <div>
-        <Navbar color="faded" light >
+        <Navbar color="faded" light>
           <NavbarBrand href="/" className="mr-auto" className='logo'></NavbarBrand>
           <NavLink to="/cart" className="fa-stack fa-2x shopping-cart" data-count={totalItems}>
             <i className="fa fa-shopping-cart fa-stack-2x"></i>

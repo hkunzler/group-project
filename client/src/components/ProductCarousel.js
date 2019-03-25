@@ -6,21 +6,22 @@ class ProductCarousel extends Component {
     render() {
         return (
             <Carousel
+                className='product-carousel'
                 showThumbs={false}
                 infiniteLoop
-                useKeyboardArrows
                 autoPlay
                 showStatus={false}
+                showArrows={false}
             >
                 <div>
                     <div style={{
-                        background: `url(https://images.prod.meredith.com/product/9715ddbd39b6a5050b7d5a35950a71cb/1546208052027/l/girls-tie-front-long-sleeve-denim-button-up-shirt)`, 
+                        background: `url(https://images.express.com/is/image/expressfashion/0022_05737689_0625?cache=on&wid=361&fmt=jpeg&qlt=75,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon)`,
                         height:'80vh', 
                         width: 'auto', 
                         backgroundRepeat: 'no-repeat', 
                         backgroundColor: 'white', 
                         backgroundPosition: 'center', 
-                        backgroundSize: 'contain' 
+                        backgroundSize: 'contain'
                     }}></div>
                 </div>
                 <div>
@@ -36,7 +37,7 @@ class ProductCarousel extends Component {
                 </div>
                 <div>
                     <div style={{
-                        background: `url(https://cdn.shopify.com/s/files/1/0189/0430/products/banana_1024x1024.jpg?v=1540840993)`, 
+                        background: `url(http://www.irockbags.com/image/cache/data/01C/lacework-splicing-fashionable-v-neck-long-sleeve-women-s-t-shirt-black-white-2097-500x500.jpg)`,
                         height:'80vh', 
                         width: 'auto', 
                         backgroundRepeat: 'no-repeat', 
