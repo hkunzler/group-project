@@ -36,14 +36,14 @@ class ProductProvider extends Component {
             })
         }).catch(error => console.log(error))
     }
-     getAdultMaleHats = () => {
-         axios.get("/products?gender=Male&age=adult&type=hat").then(response => {
-             console.log(response.data)
-             this.setState({
-                 product: response.data
-             })
-         }).catch(error => console.log(error))
-     }
+    getAdultMaleHats = () => {
+        axios.get("/products?gender=Male&age=adult&type=hat").then(response => {
+            console.log(response.data)
+            this.setState({
+                product: response.data
+            })
+        }).catch(error => console.log(error))
+    }
     getAdultMaleShirt = () => {
         axios.get("/products?gender=Male&age=adult&type=shirt").then(response => {
             console.log(response.data)
