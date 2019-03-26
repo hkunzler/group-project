@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-// const Carousel = require('react-responsive-carousel').Carousel
 
 class ProductCarousel extends Component {
     render() {
