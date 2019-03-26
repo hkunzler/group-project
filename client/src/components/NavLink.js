@@ -18,7 +18,7 @@ class NavLink extends Component {
 
     render(){
         return (
-            <div className="nav-item">
+            <div className="nested-nav-item">
                 <Link to="/" onClick={this.toggleMenu} style={{textDecoration: 'none'}}>{this.props.title}</Link>
                 {this.state.extendedMenuToggle &&  this.props.items.map(item => {
                     return ( <Link className="sub-item" to={(this.props.title+item.title).toLowerCase()} style={{textDecoration: 'none'}}>{item.title}</Link>)
