@@ -29,8 +29,7 @@ class Cards extends Component {
                 </CardBody>
                 </div>
                 </div>
-                   )
-                    )
+        ))
 
         return (
                 <div className = 'cards'>

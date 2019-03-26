@@ -20,13 +20,8 @@ import IndividualItem from './components/IndividualItem'
 import './styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-class App extends Component {
-    constructor(){
-        super()
-        this.state = {
 
-        }
-    }
+class App extends Component {
     render () {
         const { location } = this.props
 
@@ -34,7 +29,6 @@ class App extends Component {
         <div className='app'>
             <NavBar />
             <NestedNavbar/>
-            
             <PageFade location={location}>
                 <Switch location={location}>
                     <Route exact path='/' component={Home} />
