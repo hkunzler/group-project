@@ -19,7 +19,6 @@ import { PageFade } from './transitions/index.js'
 import IndividualItem from './components/IndividualItem'
 import './styles.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Checkout from './Checkout';
 
 
 class App extends Component {
@@ -48,11 +47,6 @@ class App extends Component {
                     <Route path='/:_id' component={IndividualItem}/>
                 </Switch>
             </PageFade>
-            <Checkout
-            name={'The Road to learn React'}
-            description={'Only the Book'}
-            amount={1}
-          />
         </div>
     )
 }
