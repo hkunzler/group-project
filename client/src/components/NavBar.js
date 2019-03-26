@@ -32,7 +32,7 @@ class NavBar extends React.Component {
           </NavLink>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
-          <SearchForm />           
+          {/* <SearchForm />            */}
             <Nav onClick={this.toggleNavbar} navbar>
               <NavItem  >
                 <NavLink exact to="/">Home</NavLink>

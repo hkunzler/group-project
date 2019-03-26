@@ -14,8 +14,8 @@ import {
 const items = [
   {
     src: Harmonypic,
-    altText: 'picture of Harmony',
-    caption: 'Frontend masterworker'
+    altText: 'Harmony Kunzler',
+    caption: 'Frontend masterworker and backend'
   },
   {
     src: Jeremypic,
@@ -24,8 +24,8 @@ const items = [
   },
   {
     src: Nickpic,
-    altText: 'Nick',
-    caption: ' Handy Database' 
+    altText: 'Nick Philips',
+    caption: ' Handy Database and Frontend' 
   }
 ];
 
