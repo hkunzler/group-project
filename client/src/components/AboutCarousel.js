@@ -20,7 +20,7 @@ const items = [
   {
     src: Jeremypic,
     altText: 'Jeremy Retamar Arrieta',
-    caption: 'Best Backend'
+    caption: 'Frontend and Backend masterworker'
   },
   {
     src: Nickpic,
