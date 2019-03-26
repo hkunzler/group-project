@@ -18,7 +18,7 @@ class ItemCarousel extends Component {
         >
           Featured Items
         </h1>
-        <h1 style={{ textAlign: "left", marginLeft: "5%" }}>Men</h1>
+        <h1 style={{ textAlign: "left", marginLeft: "5%", zIndex: 2 }}>Men</h1>
         <Carousel
           showThumbs={false}
           infiniteLoop
@@ -134,7 +134,7 @@ class ItemCarousel extends Component {
             />
           </Link>
         </Carousel>
-        <h1 style={{ textAlign: "left", marginLeft: "5%" }}>Women</h1>
+        <h1 style={{ textAlign: "left", marginLeft: "5%", zIndex: 2 }}>Women</h1>
         <Carousel
           showThumbs={false}
           infiniteLoop
@@ -250,7 +250,7 @@ class ItemCarousel extends Component {
             />
           </Link>
         </Carousel>
-        <h1 style={{ textAlign: "left", marginLeft: "5%" }}>Kids</h1>
+        <h1 style={{ textAlign: "left", marginLeft: "5%", zIndex: 2 }}>Kids</h1>
         <Carousel
           showThumbs={false}
           infiniteLoop

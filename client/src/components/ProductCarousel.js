@@ -21,7 +21,8 @@ class ProductCarousel extends Component {
                         backgroundRepeat: 'no-repeat', 
                         backgroundColor: 'white', 
                         backgroundPosition: 'center', 
-                        backgroundSize: 'contain'
+                        backgroundSize: 'contain',
+                        zIndex: '3'
                     }}></div>
                 </div>
                 <div>
